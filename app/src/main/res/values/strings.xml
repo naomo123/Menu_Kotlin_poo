@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Menu KOTLIN OOP</string>
+    <string name="op1">Calculadora</string>
+    <string name="op2">Promedio de estudiante</string>
+    <string name="op3">Salario neto empleado</string>
+    <string name="calculate">Calcular</string>
+    <string name="menu">Inicio</string>
+
+
+    <!--     Basic calculator  -->
+    <string name="num1">Primer número</string>
+    <string name="num2">Segundo número</string>
+    <string name="operation">Operación</string>
+    <string name="result">Resultado</string>
+
+
+    <!--    student average -->
+    <string name="name">Nombre del estudiante</string>
+    <string name="grade1">Nota 1</string>
+    <string name="grade2">Nota 2</string>
+    <string name="grade3">Nota 3</string>
+    <string name="grade4">Nota 4</string>
+    <string name="grade5">Nota 5</string>
+    <string name="average">Promedio</string>
+
+
+    <!--   net salary employee -->
+    <string name="employee_name">Nombre del empleado</string>
+    <string name="base_salary">Salario base</string>
+    <string name="net_salary">Salario neto</string>
+</resources>
