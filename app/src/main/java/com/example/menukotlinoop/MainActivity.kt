@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         }
         if (id == R.id.opcion2) {
             Toast.makeText(this, "Se seleccionó la segunda opción", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, AverageStudentActivity::class.java)
+            startActivity(intent)
 
         }
         if (id == R.id.opcion3) {

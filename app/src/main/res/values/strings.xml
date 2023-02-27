@@ -15,7 +15,7 @@
 
 
     <!--    student average -->
-    <string name="name">Nombre del estudiante</string>
+    <string name="student_name">Nombre del estudiante</string>
     <string name="grade1">Nota 1</string>
     <string name="grade2">Nota 2</string>
     <string name="grade3">Nota 3</string>
