@@ -1,7 +1,10 @@
 package com.example.menukotlinoop
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -40,5 +43,36 @@ class NetoSalaryEmployeeActivity : AppCompatActivity() {
                 Toast.makeText(this, errMsg, Toast.LENGTH_SHORT).show();
             }
         }
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.option1) {
+            Toast.makeText(this, "Se seleccionó la primera opción", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, BasicCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+        if (id == R.id.option2) {
+            Toast.makeText(this, "Se seleccionó la segunda opción", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, AverageStudentActivity::class.java)
+            startActivity(intent)
+
+        }
+        if (id == R.id.option3) {
+            Toast.makeText(this, "Se seleccionó la tercer opción", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, NetoSalaryEmployeeActivity::class.java)
+            startActivity(intent)
+        }
+        if (id == R.id.option4) {
+            Toast.makeText(this, "Calculadora básica", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, MainActivity::class.java)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

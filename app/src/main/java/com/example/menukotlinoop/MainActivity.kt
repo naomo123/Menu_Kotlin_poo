@@ -20,18 +20,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-        if (id == R.id.opcion1) {
+        if (id == R.id.option1) {
             Toast.makeText(this, "Se seleccionó la primera opción", Toast.LENGTH_LONG).show()
             val intent = Intent(this, BasicCalculatorActivity::class.java)
             startActivity(intent)
         }
-        if (id == R.id.opcion2) {
+        if (id == R.id.option2) {
             Toast.makeText(this, "Se seleccionó la segunda opción", Toast.LENGTH_LONG).show()
             val intent = Intent(this, AverageStudentActivity::class.java)
             startActivity(intent)
 
         }
-        if (id == R.id.opcion3) {
+        if (id == R.id.option3) {
             Toast.makeText(this, "Se seleccionó la tercer opción", Toast.LENGTH_LONG).show()
             val intent = Intent(this, NetoSalaryEmployeeActivity::class.java)
             startActivity(intent)
