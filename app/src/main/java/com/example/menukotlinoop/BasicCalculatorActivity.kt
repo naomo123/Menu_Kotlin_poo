@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 
+
 class BasicCalculatorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,6 +15,7 @@ class BasicCalculatorActivity : AppCompatActivity() {
         val num2 = findViewById<EditText>(R.id.editN2)
         val btnCalcu = findViewById<Button>(R.id.btnCalculate)
         val lblResult = findViewById<TextView>(R.id.lblresult)
+
 
 
         /** Spinner fill with data */
@@ -29,12 +31,10 @@ class BasicCalculatorActivity : AppCompatActivity() {
             val n2 = num2.text.toString()
             val calculator = Calculator()
             calculator.operate(n1,n2,operation)
-            if (ValidationUtils.isValidCalculator(calculator)) {
-                Toast.makeText(this, "Please enter valid data", Toast.LENGTH_SHORT).show()
-            } else {
+
                 lblResult.text = calculator.result.toString()
 
-            }
+
         }
     }
 

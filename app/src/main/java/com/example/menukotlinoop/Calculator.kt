@@ -1,5 +1,4 @@
 package com.example.menukotlinoop
-
 class Calculator {
     var number1: Double
     var number2: Double
