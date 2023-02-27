@@ -1,12 +1,12 @@
 package com.example.menukotlinoop
 
-class Calculator {
+class Calculator() {
     var number1: Double
     var number2: Double
     var operation: String
     var result: Double
 
-    constructor() {
+    init {
         this.number1 = 0.0
         this.number2 = 0.0
         this.operation = ""

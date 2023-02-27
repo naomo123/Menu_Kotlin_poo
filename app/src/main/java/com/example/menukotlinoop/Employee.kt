@@ -10,8 +10,6 @@ class Employee(name: String, baseSalary: Double ) {
     var totalDeductions: Double = 0.0
     var netSalary: Double = 0.0
 
-
-
         fun SetEmployee(name:String, baseSalary:String){
 
             val employee_name = name

@@ -9,12 +9,10 @@ class BasicCalculatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_calculator)
 
-
         val num1 = findViewById<EditText>(R.id.editN1)
         val num2 = findViewById<EditText>(R.id.editN2)
         val btnCalcu = findViewById<Button>(R.id.btnCalculate)
         val lblResult = findViewById<TextView>(R.id.lblresult)
-
 
         /** Spinner fill with data */
         val spinner = findViewById<Spinner>(R.id.operation_spinner)
@@ -23,19 +21,22 @@ class BasicCalculatorActivity : AppCompatActivity() {
         spinner.adapter = spinnerAdapter
 
         btnCalcu.setOnClickListener {
-
-            val operation = spinner.selectedItem.toString()
-            val n1 = num1.text.toString()
-            val n2 = num2.text.toString()
-            val calculator = Calculator()
-            calculator.operate(n1,n2,operation)
-            if (ValidationUtils.isValidCalculator(calculator)) {
-                Toast.makeText(this, "Please enter valid data", Toast.LENGTH_SHORT).show()
-            } else {
-                lblResult.text = calculator.result.toString()
-
+            try {
+                val operation = spinner.selectedItem.toString()
+                val n1 = num1.text.toString()
+                val n2 = num2.text.toString()
+                val calculator = Calculator()
+                calculator.operate(n1,n2,operation)
+                if (ValidationUtils.isValidCalculator(calculator)) {
+                    Toast.makeText(this, "Please enter valid data", Toast.LENGTH_SHORT).show()
+                } else {
+                    lblResult.text = calculator.result.toString()
+                }
+            } catch (e: Exception){
+                val errMsg = "Hay un campo vacío"
+                lblResult.text = errMsg
+                Toast.makeText(this, errMsg, Toast.LENGTH_SHORT).show();
             }
         }
     }
-
 }
